@@ -2,25 +2,24 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const allItems = [
-  { id: 10, type: 'local_video', category: '3D Animation', title: 'Asset 3D-v3', url: '/video/3d animation/3.webm', tall: true },
-  { id: 2, type: 'video', category: 'Video Production', title: 'Fluid State v2', url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 6, type: 'photo', category: '3D Animation', title: 'Project Delta', url: '/image/3d animation/4.webp', tall: false },
-  { id: 13, type: 'video', category: 'Video Production', title: 'Glass Horizon', url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: true },
-  { id: 3, type: 'photo', category: '3D Animation', title: 'Project Beta', url: '/image/3d animation/2.webp', tall: false },
-  { id: 19, type: 'local_video', category: '3D Animation', title: 'Internal 3D Render', url: '/video/3d animation/1.webm', tall: true },
-  { id: 8, type: 'video', category: 'Video Production', title: 'Parallax Cut', url: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 14, type: 'photo', category: '3D Animation', title: 'Holographic Core', url: 'https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 1, type: 'photo', category: '3D Animation', title: 'Project Alpha', url: '/image/3d animation/1.webp', tall: true },
-  { id: 11, type: 'video', category: 'Video Production', title: 'Neon Abyss', url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 9, type: 'local_video', category: '3D Animation', title: 'Asset 3D-v2', url: '/video/3d animation/2.webm', tall: false },
-  { id: 4, type: 'video', category: 'Video Production', title: 'Monochrome Echo', url: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: true },
-  { id: 18, type: 'photo', category: '3D Animation', title: 'Zenith Scale', url: 'https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 5, type: 'photo', category: '3D Animation', title: 'Project Gamma', url: '/image/3d animation/3.webp', tall: false },
-  { id: 16, type: 'photo', category: '3D Animation', title: 'Apex Construct', url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: true },
-  { id: 12, type: 'local_video', category: '3D Animation', title: 'Asset 3D-v4', url: '/video/3d animation/4.webm', tall: false },
-  { id: 15, type: 'video', category: 'Video Production', title: 'Shadow Frame', url: 'https://images.unsplash.com/photo-1533422902779-dac239824f11?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false },
-  { id: 7, type: 'video', category: 'Video Production', title: 'Still Gravity', url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: true },
-  { id: 17, type: 'video', category: 'Video Production', title: 'Velocity Render', url: 'https://images.unsplash.com/photo-1535016120720-40c746a51d28?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80', tall: false }
+  { id: 1, type: 'photo', category: '3D Animation', title: 'Asset 3D-1', url: '/image/3d animation/1.webp', tall: true },
+  { id: 2, type: 'photo', category: 'Video Production', title: 'Video Prod-1', url: '/image/video production/1.webp', tall: false },
+  { id: 3, type: 'local_video', category: '3D Animation', title: 'Internal Render 1', url: '/video/3d animation/1.webm', tall: true },
+  { id: 4, type: 'photo', category: '3D Animation', title: 'Asset 3D-2', url: '/image/3d animation/2.webp', tall: false },
+  { id: 5, type: 'photo', category: '3D Animation', title: 'Asset 3D-3', url: '/image/3d animation/3.webp', tall: true },
+  { id: 6, type: 'local_video', category: '3D Animation', title: 'Internal Render 2', url: '/video/3d animation/2.webm', tall: false },
+  { id: 7, type: 'photo', category: 'Video Production', title: 'Video Prod-2', url: '/image/video production/2.webp', tall: true },
+  { id: 8, type: 'photo', category: '3D Animation', title: 'Asset 3D-4', url: '/image/3d animation/4.webp', tall: false },
+  { id: 9, type: 'photo', category: '3D Animation', title: 'Asset 3D-5', url: '/image/3d animation/5.webp', tall: true },
+  { id: 10, type: 'local_video', category: '3D Animation', title: 'Internal Render 3', url: '/video/3d animation/3.webm', tall: false },
+  { id: 11, type: 'photo', category: '3D Animation', title: 'Asset 3D-6', url: '/image/3d animation/6.webp', tall: false },
+  { id: 12, type: 'photo', category: 'Video Production', title: 'Video Prod-3', url: '/image/video production/3.webp', tall: true },
+  { id: 13, type: 'photo', category: '3D Animation', title: 'Asset 3D-7', url: '/image/3d animation/7.webp', tall: false },
+  { id: 14, type: 'photo', category: '3D Animation', title: 'Asset 3D-8', url: '/image/3d animation/8.webp', tall: true },
+  { id: 15, type: 'local_video', category: '3D Animation', title: 'Internal Render 4', url: '/video/3d animation/4.webm', tall: false },
+  { id: 16, type: 'photo', category: '3D Animation', title: 'Asset 3D-9', url: '/image/3d animation/9.webp', tall: false },
+  { id: 17, type: 'photo', category: 'Video Production', title: 'Video Prod-4', url: '/image/video production/4.webp', tall: true },
+  { id: 18, type: 'photo', category: '3D Animation', title: 'Asset 3D-10', url: '/image/3d animation/10.webp', tall: false },
 ];
 
 const filters = ['ALL', '3D Animation', 'Video Production'];
