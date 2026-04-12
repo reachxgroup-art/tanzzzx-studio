@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
   const [activeModal, setActiveModal] = useState(null); // 'privacy' | 'terms' | 'brief'
-  const [briefForm, setBriefForm] = useState({ name: '', email: '', type: '', budget: '', timeline: '', message: '' });
+  const [briefForm, setBriefForm] = useState({ name: '', email: '', phone: '', type: '', budget: '', timeline: '', message: '' });
   const [briefStatus, setBriefStatus] = useState('idle'); // 'idle' | 'sending' | 'sent' | 'error'
 
   useEffect(() => {
@@ -42,6 +42,7 @@ const Footer = () => {
       <form name="brief" data-netlify="true" netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
+        <input type="tel" name="phone" />
         <input type="text" name="type" />
         <input type="text" name="budget" />
         <input type="text" name="timeline" />
@@ -200,6 +201,19 @@ const Footer = () => {
                           Email *
                         </label>
                       </div>
+                    </div>
+
+                    {/* Phone number */}
+                    <div className="relative group">
+                      <input
+                        type="tel" name="phone" id="brief-phone" placeholder=" "
+                        value={briefForm.phone}
+                        onChange={handleBriefChange}
+                        className="peer w-full bg-transparent border-b border-white/30 py-3 text-white text-sm focus:outline-none focus:border-white transition-colors"
+                      />
+                      <label htmlFor="brief-phone" className="absolute left-0 top-3 text-white/40 text-[10px] tracking-widest uppercase origin-left transform -translate-y-6 peer-placeholder-shown:translate-y-0 transition-all duration-300 pointer-events-none">
+                        Mobile Number (for direct contact)
+                      </label>
                     </div>
 
                     {/* Project Type */}
