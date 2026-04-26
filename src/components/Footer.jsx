@@ -83,9 +83,6 @@ const Footer = () => {
           <ul className="space-y-4">
             <li className="text-sm font-semibold uppercase">tanzxstudio@gmail.com</li>
             <li className="text-sm font-semibold uppercase">+91 9123855424</li>
-            <li className="text-sm text-white/50 leading-relaxed font-light mt-6">
-              194 Monochrome Ave<br />Studio 4A<br />New York, NY 10013
-            </li>
           </ul>
 
           {/* Social icon squares */}

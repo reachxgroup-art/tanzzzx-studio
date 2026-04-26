@@ -56,8 +56,9 @@ const Navbar = () => {
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/90 backdrop-blur-md py-3 md:py-4' : 'bg-transparent py-4 md:py-6'}`}>
         <div className="flex items-center justify-between px-4 sm:px-8 md:px-14">
           {/* Logo */}
-          <Link to="home" smooth duration={800} className="flex items-center gap-3 cursor-pointer select-none">
-            <span className="text-white font-black tracking-tighter text-xl md:text-2xl uppercase">Tanzzzx Studios</span>
+          <Link to="home" smooth duration={800} className="flex flex-col cursor-pointer select-none">
+            <span className="text-white font-black tracking-tighter text-xl md:text-2xl uppercase leading-none">Tanzzzx Studios</span>
+            <span className="text-white/40 text-[8px] md:text-[10px] font-bold tracking-[0.3em] uppercase mt-1">A ReachX Group Unit</span>
           </Link>
 
           {/* Phone + Hamburger */}
@@ -102,7 +103,7 @@ const Navbar = () => {
             <button onClick={() => setContactPinnedOpen(false)} className="text-white/40 hover:text-white transition-colors text-lg">✕</button>
           </div>
           <div className="flex flex-col gap-4 mb-8">
-            <a href="mailto:hello@tanzzzx.com" className="text-white/60 hover:text-white transition-colors text-[10px] font-bold uppercase tracking-[0.2em] break-all border-b border-white/10 pb-2">hello@tanzzzx.com</a>
+            <a href="mailto:tanzxstudio@gmail.com" className="text-white/60 hover:text-white transition-colors text-[10px] font-bold uppercase tracking-[0.2em] break-all border-b border-white/10 pb-2">tanzxstudio@gmail.com</a>
             <a href="tel:+919123855424" className="text-white/60 hover:text-white transition-colors text-[10px] font-bold uppercase tracking-[0.2em] border-b border-white/10 pb-2">+91 9123855424</a>
           </div>
           <div className="bg-white p-2 w-32 h-32 self-center rounded shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-300">
@@ -219,7 +220,10 @@ const Navbar = () => {
           >
             {/* Menu Header */}
             <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-white/10 shrink-0">
-              <span className="text-white font-black tracking-tighter text-base uppercase">Tanzzzx Studios</span>
+              <div className="flex flex-col">
+                <span className="text-white font-black tracking-tighter text-base uppercase leading-none">Tanzzzx Studios</span>
+                <span className="text-white/40 text-[7px] font-bold tracking-[0.2em] uppercase mt-1">A ReachX Group Unit</span>
+              </div>
               <button
                 onClick={() => setMenuOpen(false)}
                 className="w-10 h-10 flex items-center justify-center border border-white/20 text-white/60 hover:text-white hover:border-white transition-colors text-base"
@@ -262,6 +266,26 @@ const Navbar = () => {
 
             {/* Menu Footer */}
             <div className="px-6 sm:px-8 py-6 border-t border-white/10 shrink-0">
+              {/* Quick Redirects */}
+              <div className="flex gap-4 mb-8">
+                <a 
+                  href="https://www.youtube.com/@TanzzzXStudio" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 border border-white/20 text-[8px] font-black tracking-widest uppercase text-white/40 hover:text-white hover:border-white transition-all text-center"
+                >
+                  Portfolio
+                </a>
+                <a 
+                  href="https://reachxgroup.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 border border-white/20 text-[8px] font-black tracking-widest uppercase text-white/40 hover:text-white hover:border-white transition-all text-center"
+                >
+                  ReachX Group
+                </a>
+              </div>
+
               {/* Contact info row */}
               <div className="flex flex-col gap-2 mb-5">
                 <a href="mailto:tanzxstudio@gmail.com" className="text-white/30 hover:text-white transition-colors text-[9px] tracking-widest uppercase font-bold">

@@ -5,32 +5,28 @@ const Contact = () => {
   return (
     <section id="contact" className="py-32 bg-black text-white relative overflow-hidden border-t border-white/10">
       <div className="absolute top-0 right-0 w-[60vw] h-[60vw] bg-white opacity-[0.02] rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
-        
+
         <div className="lg:w-1/2">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 uppercase">Initiate.</h2>
             <p className="text-xl text-white/60 font-light mb-16 max-w-sm">Submit your inquiry to begin the dialogue.</p>
-            
+
             <div className="space-y-10 text-sm font-semibold tracking-widest uppercase">
               <div>
-                <span className="text-white/40 block mb-3">Location</span>
-                <p className="border-l-2 border-white/20 pl-4">194 Monochrome Ave, Studio 4A<br />New York, NY 10013</p>
-              </div>
-              <div>
                 <span className="text-white/40 block mb-3">Direct</span>
-                <p className="border-l-2 border-white/20 pl-4">hello@tanzzzx.com<br />+91 9123855424</p>
+                <p className="border-l-2 border-white/20 pl-4">tanzxstudio@gmail.com<br />+91 9123855424</p>
               </div>
             </div>
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
